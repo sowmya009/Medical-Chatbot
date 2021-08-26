@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}" />
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <style>
+        .userText{
+            color: black;
+        }
+        .botText{
+            color: black;
+        }
+        .botText span{
+            background-color: whitesmoke;
+        }
+        h1{
+            font-size: 30px;
+        }
+        #id{
+            background-color: white;
+            width: 50%;
+        }
+        img{
+            width: 50%;
+        }
+        .row{
+            display: flex;
+        }
+        .picture{
+            margin-top: 100px;
+            width: 40%;
+            height: 100%;
+            display: flex;
+            float: left;
+        }
+        .chatbot{
+            margin: 0%;
+            float: left;
+            display: block;
+            width: 60%;
+        }
+        @media (min-width:992px) and (max-width:1200px){
+            #id{
+                background-color: white;
+                width: 50%;
+            }
+            img{
+                width: 50%;
+            }
+            .row{
+                display: flex;
+            }
+            .picture{
+                margin-top: 100px;
+                width: 300px;
+                height: 100%;
+                display: flex;
+                float: left;
+            }
+            .chatbot{
+                margin: 0%;
+                float: left;
+                display: block;
+                width: 60%;
+            }
+            #userInput{
+                width: 550px;
+            }
+            #chatbox{
+                width: 550px;
+            }
+        }
+        @media (min-width:768px) and (max-width:991px){
+            #id{
+                background-color: white;
+                width: 50%;
+            }
+            img{
+                width: 50%;
+            }
+            .row{
+                display: flex;
+            }
+            .picture{
+                margin-top: 0;
+                width: 300px;
+                height: 100%;
+                display: flex;
+                float: left;
+            }
+            .chatbot{
+                margin: 0%;
+                float: left;
+                display: block;
+                width: 600px;
+            }
+            #userInput{
+                width: 500px;
+            }
+            #chatbox{
+                width: 500px;
+            }
+
+        }
+        @media (min-width: 600px) and (max-width: 767px){
+            #id{
+                background-color: white;
+                width: 100%;
+            }
+            img{
+                width: 50%;
+            }
+            .row{
+                display: flex;
+            }
+            .picture{
+                margin-top: 0;
+                width: 300px;
+                height: 100%;
+                display: flex;
+                float: left;
+            }
+            .chatbot{
+                margin: 0%;
+                float: left;
+                display: block;
+                width: 600px;
+            }
+            #userInput{
+                width: 500px;
+            }
+            #chatbox{
+                width: 500px;
+            }
+            h1{
+                align-items: center;
+            }
+        }
+        @media (max-width:600px){
+            #id{
+                background-color: white;
+                width: 100%;
+            }
+            img{
+                width: 300px;
+            }
+            .row{
+                display: flex;
+            }
+            .picture{
+                margin-top: 0px;
+                width: 300px;
+                height: 100%;
+                display: flex;
+                float: center;
+            }
+            .chatbot{
+                margin: 0%;
+                float: center;
+                display: block;
+                width: 400px;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            #userInput{
+                width: 400px;
+            }
+            #chatbox{
+                width: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+ 
+<div class="container">  
+<div class="row">
+    <img class="picture" src="static\pic.gif">
+    <div class="chatbot">
+    <h1>Health care AI ChatBot</h1>
+    <form>
+        <div id="chatbox">
+            <div class="col-md-8 ml-auto mr-auto">
+                <p class="botText"></p>
+            </div>
+        </div>
+        <div id="userInput" class="row">
+            <div class="col-md-10">
+                <input id="text" type="text" name="msg" placeholder="Message" class="form-control">
+                <button type="submit" id="send" class="btn btn-warning">Send</button>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
+</div>
+<script>
+    $(document).ready(function() {
+        $("form").on("submit", function(event) {
+            var rawText = $("#text").val();
+            var userHtml = '<p class="userText" style="color: black;"><span>' + rawText + "</span></p>";
+            $("#text").val("");
+            $("#chatbox").append(userHtml);
+            document.getElementById("userInput").scrollIntoView({
+                block: "start",
+                behavior: "smooth",
+            });
+            $.ajax({
+                data: {
+                    msg: rawText,
+                },
+                type: "POST",
+                url: "/get",
+            }).done(function(data) {
+                var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+                $("#chatbox").append($.parseHTML(botHtml));
+                document.getElementById("userInput").scrollIntoView({
+                    block: "start",
+                    behavior: "smooth",
+                });
+            });
+            event.preventDefault();
+        });
+    });
+</script>
+</body>
+
+</html>

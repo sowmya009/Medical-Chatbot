@@ -1,0 +1,233 @@
+{
+    "intents": [
+        {
+            "tag":"greetings",
+            "patterns": ["hello","hey","hi","good day","greetings","what's up?","how is it going"],
+            "responses":["hello","hey!","what can i do for you?"],
+            "context": [ "" ]
+        },
+        {
+            "tag":"goodbye",
+            "patterns": ["cya","see you later","goodbye","have a good day","bye","cao","see ya"],
+            "responses":["have a nice day","goodbye"],
+            "context": [ "" ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": ["Thanks", "okay","Thank you","thankyou", "That's helpful", "Awesome, thanks", "Thanks for helping me", "wow", "great"],
+            "responses": ["Happy to help!", "Any time!","you're welcome", "My pleasure"],
+            "context": [ "" ]
+        },
+        {
+            "tag": "noanswer",
+            "patterns": [""],
+            "responses": ["Sorry, I didn't understand you", "Please give me more info", "Not sure I understand that"],
+            "context": [ "" ]
+        },
+        {
+            "tag": "who",
+            "patterns": ["  Who are you?"],
+            "responses": [" I am just an artificial intelligence chat agent."]
+        },
+        {
+            "tag": "bot1",
+            "patterns": ["are you a bot"],
+            "responses": ["Yes. I work and all my operations are based on the internet servers."]
+        },
+        {
+            "tag":"name",
+            "patterns": ["what is your name","what should i call you","what's your name?","who are you?","can you tell me your name"],
+            "responses":["you can call me Medbot!","i am Medbot!","i am Medbot your medical assistant"]
+        },
+        {
+            "tag": "do",
+            "patterns": ["what can you do for me","what is your work","what is your purpose","how can you help me","what can you help me do"],
+            "responses": ["my work here is quite simple and structered. I offer services like:"]
+        },
+        {   
+            "tag": "corona",
+            "patterns": ["what's corona","what is corona virus","describe corona","covid","corona","what is covid"],
+            "responses": ["Coronaviruses are a large family of viruses that cause illness ranging from the common cold to more severe diseases. A novel coronavirus is a new strain that has not been previously identified in humans."]
+        },
+        {
+            "tag":"symptoms of corona",
+            "patterns":["what are the symptoms of corona","what are the symptoms of covid19","what are the symptoms of covid","symptoms of corona","symptoms of covid","symptoms of covid19"],
+            "responses":["MOST COMMON SYMPTOMS:fever, dry cough, tiredness. LESS COMMON SYMPTOMS: aches and pains, sore throat, diarrhoea, conjunctivitis, headache, loss of taste or smell, a rash on skin, or discolouration of fingers or toes. Serious symptoms: difficulty breathing or shortness of breath, chest pain or pressure, loss of speech or movement"]
+        },
+        {
+            "tag": "headache",
+            "patterns": ["i have a headache","i am getting headache"],
+            "responses": ["what type of headache? Like Migrane, Tension headache, Hypertension headache, Sinus headaches"]
+        },
+        {
+            "tag":"causes of migraneheadache",
+            "patterns":["migrane","i am having a migrane headache","causes and prevention","what are the causes of migranes","what are the causes of migrane headaches","what are the prevention of migranes","what are the prevetion of migrane headache"],
+            "responses":["CAUSES: Doctors don’t know the exact cause of migraine headaches, although they seem to be related to changes in your brain and to your genes. PREVENTION:Manage Stress, Excercise/ do yoga regularly, eat on a regular schedule, drink more water."]
+        },
+        {
+            "tag":"medicine for migrane",
+            "patterns":["medicines for migrane","what medicine is recommended for migranes","what medicine can i have for migrane"],
+            "responses":["Medicines for migrane: Aspirin, Naproxen, First try out yoga and then go for medicine"]
+        },
+        {
+            "tag":"tension headache",
+            "patterns":["causes and prevention of tension headache","general steps to prevent tension headaches","how to get rid of tension headaches"],
+            "responses":["PREVENTION: The only way is to relax, Excercise regularly or yoga, Eating Healthy"]
+        },
+        {
+            "tag":"medicine for tension headache",
+            "patterns":["cure for tension headache","medicine for tension headche"],
+            "responses":["The best way is to practice yoga stretch your neck. Drink water and relax. Use a hot water bag on your neck. If that dont work can consume : Naproxen."]
+        },
+        {
+            "tag":"causes Hypertension headache",
+            "patterns":["What are the causes of hypertension headache","causes and prevention for hypertension","how to prevent hypertension","main causes for hypertension","what are the main causes for hypertension"],
+            "responses":["CAUSES: High blood pressure. PREVENTION: If you think you’re experiencing a hypertension headache, you should seek immediate medical attention."]
+        },
+        {
+            "tag":"general headaches",
+            "patterns":["What medicine is to be taken for general headaches","medicine for general headache"],
+            "responses":["Asprin or Naproxen"]
+        },
+        {
+            "tag":"seek doctor for headache",
+            "patterns":["When to seek doctor for headaches","when should i see a doctor in case of headaches","when to see a doctor for headache"],
+            "responses":["stiff neck, rash, the worst headache you’ve ever had vomiting, confusion, slurred speech, any fever of 100.4°F or higher, paralysis in any part of your body or visual loss"]
+        },
+        {
+            "tag":"sinus",
+            "patterns":["symptoms of synus","sinusitis","sinus"],
+            "responses":["Signs and symptoms of sinus headaches may include: Pain, pressure and fullness in your cheeks, brow or forehead, Worsening pain if you bend forward or lie down, Stuffy nose, Fatigue, Achy feeling in your upper teeth"]
+        },
+        {
+            "tag":"cause and prevention of sinus",
+            "patterns":["what are causes and prevention for sinus/sinusitis","cause and prevention of sinus"],
+            "responses":["CAUSES: Nasal polyps. Deviated nasal septum. Respiratory tract infections. Allergies such as hay fever. PREVENTION: Avoid upper respiratory infections like cold. Avoid cigarette smoke and polluted air. Use a humidifier. "]
+        },
+        {
+            "tag":"sinus headaches",
+            "patterns":["causes and prevention of sinus headaches","what are causes and prevention for sinus headache"],
+            "responses":["CAUSES: Sinus headaches are usually associated with migraines or other forms of headaches. And not caused due to sinus infections. PREVENTION: Avoid cold weather, Avoid cold drinks"]
+        },
+        {
+            "tag":"medicine for sinus",
+            "patterns":["what is the medicine for sinus","what is the medicine for sinusitis","sinus medicine","sinusitis medicine"],
+            "responses":["Consult doctor and check the stage of sinus"]
+        },
+        {
+            "tag":"common cold symptoms",
+            "patterns": ["Runny or stuffy nose",
+            "Sore throat",
+            "Cough",
+            "Congestion",
+            "Slight body aches or a mild headache",
+            "Sneezing",
+            "Low-grade fever",
+            "Generally feeling unwell","what are cold symptoms","symptoms of cold"],
+            "responses":["It seems that you are suffering from common cold"]
+        },
+        {
+            "tag":"fever symptoms",
+            "patterns":["Sweating",
+            "Chills and shivering",
+            "Headache",
+            "Muscle aches",
+            "Loss of appetite",
+            "Irritability",
+            "Dehydration",
+            "General weakness","what are fever symptoms","symptoms of fever"],
+            "responses":["It seems that you are suffering from fever"]
+        },
+        {
+            "tag":"Diabetes symptoms",
+            "patterns":["increased hunger",
+            "increased thirst",
+            "weight loss",
+            "frequent urination",
+            "blurry vision",
+            "extreme fatigue","What are diabets symptoms","symptoms of diabetes"],
+            "responses":["It seems that you are suffering from Diabetes"]
+        },
+        {
+            "tag":"Depression symptoms",
+            "patterns":["Hopeless outlook",
+            "Lost interest",
+            "Increased fatigue",
+            "sleep problem",
+            "Anxiety",
+            "change in weight",
+            "Looking at death","What are depression symptoms","symptoms of depression"],
+            "responses":["It seem that you are suffering from depression"]
+        },
+        {
+            "tag":"Asthma symptoms",
+            "patterns":["coughing",
+            "tightness in the chest",
+            "shortness of breath",
+            "difficulty talking",
+            "panic",
+            "fatigue","what are asthma symptoms","symptoms of asthma"],
+            "responses":["It seem that you are suffering from Asthma"]
+        },
+        {
+            "tag":"common cold prevention",
+            "patterns":["What medicines can I buy to help me with my common cold?","tell me some prevention method from common cold",
+                "How can I keep from getting a cold or the flu?"],
+            "responses":["medicines you can consume : Dextromethorphan,Decongestant,Diphenhydramine,Crocin Cold & Flu Max, preventions that you must follow :Wash your hands,Avoid touching your face,Clean frequently used surfaces,Use hand sanitizers"]
+        },
+        {
+            "tag":"diet for cold",
+            "patterns":["what diet should i follow if having a cold","diet paln for cold","food to it when having cold"],
+            "responses":["SUGGESTED FOODS ARE:Garlic,Vitamin C–containing fruits,Leafy greens,Broccoli,Oatmeal,Spices,Chicken Soup"]
+        },
+        {
+            "tag":"fever prevention",
+            "patterns":["What medicines can I buy to help me with my fever?","tell me some prevention method from fever","How can I keep from getting a fever?"],
+            "responses":["medicines you can consume : acetaminophen ,ibuprofen,aspirin,Crocin Cold & Flu Max, prevention that you must follow :Wash your hands,Cover your mouth when you cough and your nose when you sneeze,Clean frequently used surfaces,Avoid sharing cups, glasses, and eating utensils with other people."]
+        },
+        {
+            "tag":"diet for fever",
+            "patterns":["what diet should i follow if having a fever","diet paln for fever","food to it when having fever"],
+            "responses":[" SUGGESTED FOODS ARE:Garlic,Vitamin C–containing fruits,Leafy greens,Broccoli,Oatmeal,Spices,Chicken Soup"]
+        },
+        {
+            "tag":"fever prevention",
+            "patterns":["Prevention for fever","preventive measures for fever"],
+            "responses":["prevention that you must follow :Wash your hands,Cover your mouth when you cough and your nose when you sneeze,Clean frequently used surfaces,Avoid sharing cups, glasses, and eating utensils with other people."]
+        },
+        {
+            "tag":"diabetes medition",
+            "patterns":["What medicines can I buy to help me with my diabetes?",
+                "How can I keep from getting diabetes?"],
+            "responses":["medicines you can consume : Insulin ,Amylinomimetic drug,Dipeptidyl peptidase-4 (DPP-4) inhibitor"]
+        },
+        {
+            "tag":"diabetes prevention",
+            "patterns":["What should I eat or drink if i am suffering from diabetes?","prevention for diabetes"],
+            "responses":["prevention that you must follow :Cut Sugar and Refined Carbs From Your Diet,Work Out Regularly,Drink Water as Your Primary Beverage,Lose Weight If You’re Overweight or Obese,Quit Smoking, Follow a Very-Low-Carb Diet,Watch Portion Sizes,SUGGESTED FOODS ARE:Leafy greens,Avocados,Eggs"]
+        },
+        {
+            "tag":"deit for diabetes",
+            "patterns":["diet plan for diabetes patients", "what should i eat to contol sugar","What should I eat or drink if i am suffering from diabetes?"],
+            "responses":["prevention that you must follow :Cut Sugar and Refined Carbs From Your Diet,Work Out Regularly,Drink Water as Your Primary Beverage,Lose Weight If You’re Overweight or Obese,Quit Smoking, Follow a Very-Low-Carb Diet,Watch Portion Sizes, SUGGESTED FOODS ARE:Leafy greens,Avocados,Eggs"]
+        },
+        {
+            "tag":"depression prevention",
+            "patterns":["What medicines can I buy to help me with my depression?","tell me some prevention method from depression",
+                "How can I keep from getting depression?"],
+            "responses":["medicines you can consume :  brexpiprazole, quetiapine,olanzapine, prevention that you must follow :Exercise regularly,Cut back on social media time,Drink Water as Your Primary Beverage,Build strong relationships,Minimize your daily choices, Follow a Very-Low-Carb Diet,SUGGESTED FOODS ARE:Get Enough Vitamin D,Include Omega-3 Fatty Acids,Beans and legumes"]
+        },
+        {
+            "tag":"asthma prevention",
+            "patterns":["What medicines can I buy to help me with my asthma?","tell me some prevention method from asthma",
+                "What should I eat or drink if i am suffering from asthma?","How can I keep from getting asthma?"],
+            "responses":["medicines you can consume : epinephrine,anticholinergic,Proair HFA, prevention that you must follow : Identify Asthma Triggers, Stay Away From Allergens,Avoid Smoke of Any Type,SUGGESTED FOODS ARE:carrots,juice,eggs,broccoli,cantaloupe,milk"]
+        },
+        {
+            "tag":"Consultation",
+            "patterns": ["who should i contact for consultation?","is there any doctor available?",
+                "can you give me some suggestions for doctor consultations?","can you set up a meeting with a doctor for consultation?","is there any doctor available for consultation"],
+            "responses":["You can contact various doctors here for any kind of consultation: 1. https://www.1mg.com/online-doctor-consultation, 2. https://www.tatahealth.com/online-doctor-consultation/general-physician, 3. https://www.doconline.com/, or you can pay a visit to your local area doctor or family doctor."]
+        }
+    ]
+}
